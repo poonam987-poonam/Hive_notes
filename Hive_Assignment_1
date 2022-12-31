@@ -123,4 +123,11 @@ e. In which country sales was maximum and in which country sales was minimum
     
     
 f. Calculate quartelry sales for each city
+
+   select sum(sales) as total_sales, city
+    from sales_order_data_orc_v1
+    group by city 
+    order by total_sales desc;
+    
+    
 h. Find a month for each year in which maximum number of quantities were sold
