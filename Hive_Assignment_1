@@ -85,6 +85,8 @@ a. Calculatye total sales per year
     
     
 b. Find a product for which maximum orders were placed
+      select QUANTITYORDERED from sales_order_data_desc 
+      order by QUANTITYORDERED desc limit 1
 c. Calculate the total sales for each quarter
 d. In which quarter sales was minimum
 e. In which country sales was maximum and in which country sales was minimum
