@@ -42,9 +42,13 @@ Note: both files are csv files.
 2. Dump the data inside the hdfs in the given schema location.
 
   hadoop fs -put /home/cloudera/poonam/AgentLogingReport.csv  /tmp/dirx
-
+   
+  load data inpath '/tmp/dirx/' into table agent_Loging_report
+   
+   
   hadoop fs -put /home/cloudera/poonam/AgentPerformance.csv   /tmp/dirx
-
+  
+  load data inpath '/tmp/dirx/' into table agent_performance
 
 
 3. List of all agents' names. 
