@@ -8,7 +8,45 @@ Note: both files are csv files.
 
 
 1. Create a schema based on the given dataset
+ 
+ 
+  create table agent_Loging_report
+    > (
+    > sl_no int ,
+    > agent_name string ,
+    > date string ,
+    > Loging_time string ,
+    > Logout_time string ,
+    > Duration string ,
+    > )
+    > row format delimited
+    > fields terminated by ','
+    > tblproperties ("skip.header.line.count" = "1");
+    
+    
+ create table agent_performance
+    > (
+    > sl_no int ,
+    > date string ,
+    > agent_name string ,
+    > total_chats string ,
+    > avg_response_time string ,
+    > avg_resolution_time string ,
+    > avg_rating float ,
+    > total_feedback int )
+    > row format delimited
+    > fields terminated by ','
+    > tblproperties ("skip.header.line.count" = "1");
+
+
 2. Dump the data inside the hdfs in the given schema location.
+
+  hadoop fs -put /home/cloudera/poonam/AgentLogingReport.csv  /tmp/dirx
+
+  hadoop fs -put /home/cloudera/poonam/AgentPerformance.csv   /tmp/dirx
+
+
+
 3. List of all agents' names. 
 4. Find out agent average rating.
 5. Total working days for each agents 
