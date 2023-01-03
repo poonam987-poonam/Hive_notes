@@ -52,11 +52,33 @@ Note: both files are csv files.
 
 
 3. List of all agents' names. 
+
+   select agnet_name from agent_Loging_report ;
+
 4. Find out agent average rating.
+ 
+   select avg(avg_rating) from agent_performance ;
+
 5. Total working days for each agents 
+    
+    select agent_name , duration from agent_Loging_report ;
+    
 6. Total query that each agent have taken 
+
+    select total_chats from agent_performance
+    
+    
 7. Total Feedback that each agent have received 
+
+      select total_feedback from agent_performance
+      
+      
+      
 8. Agent name who have average rating between 3.5 to 4 
+
+     select agent_name from agen
+
+
 9. Agent name who have rating less than 3.5 
 10. Agent name who have rating more than 4.5 
 11. How many feedback agents have received more than 4.5 average
